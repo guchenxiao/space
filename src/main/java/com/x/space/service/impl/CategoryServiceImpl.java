@@ -1,0 +1,31 @@
+package com.x.space.service.impl;
+
+import com.x.space.entity.Category;
+import com.x.space.mapper.CategoryMapper;
+import com.x.space.service.CategoryService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+/**
+ * <p>
+ * 商品分类 服务实现类
+ * </p>
+ *
+ * @author GCX
+ * @since 2021-08-31
+ */
+@Service
+public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> implements CategoryService {
+
+    @Autowired
+    private CategoryMapper categoryMapper;
+
+    @Override
+    public List<Category> findAll() {
+        List<Category> categories = categoryMapper.findAll();
+        return categories;
+    }
+}
