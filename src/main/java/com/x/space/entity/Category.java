@@ -35,9 +35,9 @@ public class Category extends Model {
 
     /**
      * 分类层级 分类得类型，
-1:一级大分类
-2:二级分类
-3:三级小分类
+     * 1:一级大分类
+     * 2:二级分类
+     * 3:三级小分类
      */
     private Integer categoryLevel;
 

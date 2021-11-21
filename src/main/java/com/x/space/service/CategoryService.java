@@ -17,4 +17,7 @@ public interface CategoryService extends IService<Category> {
 
     List<Category> findAll();
 
+
+    List<Category> page(int pageNum,int pageSize);
+
 }
